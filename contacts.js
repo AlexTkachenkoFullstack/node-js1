@@ -4,7 +4,6 @@ const path = require("path");
 const contactsPath = path.join(__dirname, "db/contacts.json");
 
 async function listContacts() {
-  // Возвращает массив контактов.
   try {
     const data = await fs.readFile(contactsPath);
     const contacts = await JSON.parse(data);
